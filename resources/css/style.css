@@ -122,6 +122,7 @@ h3 {
     line-height: 145%;
     width: 70%;
     margin-left: 15%;
+    text-align: center;
 }
 
 .box p {
@@ -330,33 +331,33 @@ header {
 }
 
 /*-----------------------------------------*/
-/* MEALS */
+/* PROJECTS */
 /*-----------------------------------------*/
 
-.section-meals {
+.section-projects {
     padding: 0px;
 }
 
-.meals-showcase {
+.project-showcase {
     list-style: none;
     width: 100%;
     
 }
 
-.meals-showcase li{
+.project-showcase li{
     display: block;
     float:left;
     width: 25%;
 }
 
-.meal-photo {
+.project-photo {
     width: 100%;
     margin: 0;
     overflow: hidden;
     background-color: #000;
 }
 
-.meal-photo img {
+.project-photo img {
     opacity: 0.7;
     width: 100%;
     height: auto;
@@ -368,11 +369,21 @@ header {
     transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
-.meal-photo img:hover {
+.project-photo img:hover {
     -webkit-transform: scale(1.03);
             transform: scale(1.03);
     opacity: 1;
     
+}
+
+.project-hover{
+    visibility: hidden;
+    position: absolute;
+}
+.project-hover:hover{
+    visibility: visible;
+    transform: translate(0,0);
+
 }
 
 

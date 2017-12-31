@@ -1,6 +1,9 @@
-$(document).ready(function () {
+$(document).ready(initializeApp);
 
 
+function initializeApp() {
+
+    /* For stikcy navigation */
     $('.js--section-features').waypoint(function(direction) {
         if(direction == "down") {
             $('nav').addClass('sticky');
@@ -10,17 +13,17 @@ $(document).ready(function () {
         } 
     }, {
   offset: '25%'
-});
-    
-/* 
-    var waypoints = $('#handler-first').waypoint(function(direction) {
-  notify(this.element.id + ' hit 25% from top of window') 
-}, {
-  offset: '25%'
-});
-*/
-    
-    
-});
+    });
 
-
+    /* button scroll                   */
+    $('.js--scroll-to-projects').click(function(){
+        $('html,body').animate({scrollTop: $('.section-projects').offset().top - 100}, 1000);
+    });
+    $('.js--scroll-to-contact').click(function(){
+        $('html,body').animate({scrollTop: $('.section-form').offset().top - 100}, 1000);
+    });
+    $('.js--scroll-to-aboutMe').click(function(){
+        $('html,body').animate({scrollTop: $('.section-features').offset().top}, 1000);
+    });
+    
+}
