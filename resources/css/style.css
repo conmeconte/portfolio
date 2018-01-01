@@ -253,6 +253,11 @@ header {
 
 
 /* Main Navi*/
+header .row{
+    max-width: 100%;
+    margin-right: 5%;
+}
+
 .main-nav{ 
     float: right;
     list-style: none;
@@ -262,15 +267,16 @@ header {
 .main-nav li {
     display: inline-block;
     margin-left: 40px;
-    
+    font-size: 150%;
+    color: #fff;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    color: #fff;
+
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 90%;
+
     border-bottom: 2px solid transparent; 
     -webkit-transition: border-bottom 0.2s; 
     transition: border-bottom 0.2s;
@@ -307,11 +313,14 @@ header {
     z-index: 9999;
 }
 
-.sticky .main-nav {margin-top: 18px;}
+.sticky .main-nav {margin: 18px 0;}
 
+.sticky .main-nav li a{
+    color: #555;
+}
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
-    color: #555;
+
     padding: 16px 0px;
 }
 

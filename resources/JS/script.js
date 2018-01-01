@@ -12,7 +12,7 @@ function initializeApp() {
             $('nav').removeClass('sticky')
         } 
     }, {
-  offset: '25%'
+  offset: '30%'
     });
 
     /* button scroll                   */
@@ -48,6 +48,11 @@ function initializeApp() {
         $('.js--wp-4').addClass('animated fadeIn');
     }, {
         offset: '50%'
+    });
+    $('.js--wp-5').waypoint(function(direction){
+        $('.js--wp-5').addClass('animated swing');
+    }, {
+        offset: '0%'
     });
 /*Mobile Nav*/
 
