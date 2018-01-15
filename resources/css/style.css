@@ -166,8 +166,9 @@ a:visited {
 
 a:hover, 
 a:active {
-    color: #555;
+    color: #27aadf;
     border-bottom: 1px solid transparent;
+    cursor: pointer;
     
 }
 
@@ -181,7 +182,7 @@ input[type=submit] {
     text-decoration: none;
     border-radius: 200px;
     -webkit-transition: background-color 0.2s;
-    transition: background-color 0.2s;border 0.2s, color 0.2s;
+    transition: background-color 0.2s,border 0.2s, color 0.2s;
     
     
 }
@@ -258,7 +259,7 @@ header .row{
 .main-nav{ 
     float: right;
     list-style: none;
-    margin-top: 55px;
+    margin-top: 3%;
 }
     
 .main-nav li {
@@ -314,6 +315,7 @@ header .row{
 
 .sticky .main-nav li a{
     color: #555;
+    padding: 16px 0; 
 }
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
@@ -331,7 +333,9 @@ header .row{
 #myPicture{
     margin-top:10%;
 }
-
+#myPicture img{
+    width: 100%;
+}
 /*-----------------------------------------*/
 /* PROJECTS */
 /*-----------------------------------------*/
@@ -393,76 +397,15 @@ header .row{
 /* HOW IT WORKS*/
 /*-----------------------------------------*/
 
-.section-steps{
+.section-skills{
     background-color: #f4f4f4;
 }
-
-.steps-box:first-child {
-    text-align: right;
-    padding-right: 3%;
-    margin-top: 30px;
-}
-
-.steps-box:last-child {
-    padding-left: 3%;
-    margin-top: 70px;
-    
-}
-
-.app-screen {
-    width: 40%;
-}
-
-.works-step {
-    margin-bottom: 50px;
-    
-}
-
-.works-step:last-of-type {
-    margin-bottom: 80px;
-}
-
-.works-step div {
-    color: #27aadf;
-    border: 2px solid #27aadf;
-    display: inline-block;
-    border-radius: 50%;
-    height: 55px;
-    width: 55px;
-    text-align: center;
-    padding: 5px;
-    float: left;
-    font-size: 150%;
-    margin-right: 25px;
-}
-
-.btn-app:link,
-.btn-app:visited {
-    border: 0;
-}
-.btn-app img {
-    height: 50px;
-    width: auto;
-    margin-right: 10px;
-    
+.section-skills .skills{
+    font-size: 300%;
 }
 
 
 
-/*-----------------------------------------*/
-/* CITIES*/
-/*-----------------------------------------*/
-
-.box img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.city-feature {
-    margin-bottom: 5px;
-    
-}
 
 /*-----------------------------------------*/
 /* TESTIMONIALS*/
@@ -507,67 +450,9 @@ cite img {
     
 }
 
-/*-----------------------------------------*/
-/* TESTIMONIALS*/
-/*-----------------------------------------*/
-
-.section-plans{
-    background-color: #f4f4f4; 
-    
-}
-
-.plan-box{
-    background-color: #fff; 
-    border-radius: 5px;
-    width: 90%;
-    margin-left: 5%;
-    -webkit-box-shadow: 0 2px 2px #efefef;
-            box-shadow: 0 2px 2px #efefef;
-}
-
-.plan-box div {
-    padding: 15px;
-    border-bottom: 1px solid #e8e8e8;
-    
-}
-
-.plan-box div:first-child{
-    background-color: #fcfcfc;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-.plan-box div:last-child {
-    text-align: center;
-    border: 0;
-}
-
-.plan-price {
-    font-size: 300%;
-    margin-bottom: 10px;
-    font-weight: 100; 
-    color: #27aadf;
-}
-
-.plan-price span{
-    font-size: 30%;
-    font-weight: 300;
-}
-
-.plan-price-meal{
-    font-size: 80%;
-}
-
-.plan-box ul{
-    list-style: none;
-}
-
-.plan-box ul li{
-    padding: 5px 0;
-}
-
 
 /*-----------------------------------------*/
-/* TESTIMONIALS*/
+/* contact*/
 /*-----------------------------------------*/
 
 .contact-form {
@@ -680,50 +565,6 @@ footer p {
     color: #888;
     text-align: center;
     margin-top: 20px;
-}
-
-/*==========================Particles================================*/
-canvas {
-    display: block;
-    vertical-align: bottom;
-}
-
-
-
-/* ---- stats.js ---- */
-
-.count-particles{
-    background: #000022;
-    position: absolute;
-    top: 48px;
-    left: 0;
-    width: 80px;
-    color: #13E8E9;
-    font-size: .8em;
-    text-align: left;
-    text-indent: 4px;
-    line-height: 14px;
-    padding-bottom: 2px;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-}
-
-.js-count-particles{
-    font-size: 1.1em;
-}
-
-#stats,
-.count-particles{
-    -webkit-user-select: none;
-}
-
-#stats{
-    border-radius: 3px 3px 0 0;
-    overflow: hidden;
-}
-
-.count-particles{
-    border-radius: 0 0 3px 3px;
 }
 
 /*-----------------------------------------*/
