@@ -68,6 +68,26 @@ function initializeApp() {
             icon.removeClass('ion-close-round');
         }
 
+    });
+
+
+
+/*Proejcts hovering*/
+    $('.project-photo').hover(
+        ()=>{
+        // $('.project-hover').css('visibility', 'visible');
+        event.target.nextElementSibling.style.visibility = "visible"
+        // $('.project-photo img').attr('id','project-photo-selected');
+        event.target.setAttribute("id", "project-photo-selected")
+    },
+        ()=>{
+        $('.project-hover').css('visibility', 'hidden');
+        $('.project-photo img').removeAttr('id');
+        // event.target.removeAttribute('id');
+
+
+
+
     })
 }
 
