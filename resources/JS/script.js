@@ -66,9 +66,19 @@ function initializeApp() {
         } else{
             icon.addClass('ion-navicon-round');
             icon.removeClass('ion-close-round');
-        }
+        } 
 
     });
+
+    $(document).on('click',()=>{
+        var nav = $('.js--main-nav');
+        var icon = $('.js--nav-icon i')
+        if(!$(event.target).closest('.js--nav-icon').length && icon.hasClass('ion-close-round')){
+            icon.addClass('ion-navicon-round');
+            icon.removeClass('ion-close-round');
+            nav.slideToggle();
+        }
+   })
 
 
 
