@@ -76,9 +76,15 @@ function initializeApp() {
     $('.project-photo').hover(
         ()=>{
         // $('.project-hover').css('visibility', 'visible');
-        event.target.nextElementSibling.style.visibility = "visible"
+        try{
+            event.target.nextElementSibling.style.visibility = "visible"
+            event.target.setAttribute("id", "project-photo-selected")
+
+        }
+        catch(error){
+            console.log(error);
+        }
         // $('.project-photo img').attr('id','project-photo-selected');
-        event.target.setAttribute("id", "project-photo-selected")
     },
         ()=>{
         $('.project-hover').css('visibility', 'hidden');
