@@ -103,6 +103,15 @@
         padding: 4px;
         font-size: 120%;
     }
+    #myPicture{
+        width:25%; 
+        left: 25%;
+        position: relative;
+        transform: translateX(50%);
+    }
+    .project-hover h5, a:link, a:visited{
+        font-size:80%;
+    }
     .works-step {margin-bottom: 20px;}
     .works-step:last-of-type {margin-bottom: 20px;}
 }
