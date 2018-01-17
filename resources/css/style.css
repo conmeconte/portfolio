@@ -506,6 +506,7 @@ cite img {
 
 input[type=text],
 input[type=email],
+input[type=subject],
 select,
 textarea {
     width: 100%;

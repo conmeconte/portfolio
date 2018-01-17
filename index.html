@@ -272,7 +272,7 @@
                 <h2>Contact Me</h2>
             </div>
             <div class="row">
-                <form method="post" action="#" class="contact-form">
+                <form class="contact-form">
                     <div class="row">
                         <div class="col span-1-of-3">
                             <label for="name">Name</label>    
@@ -289,13 +289,21 @@
                             <input type="email" name="email" id="email" placeholder="Your email" required>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col span-1-of-3">
+                            <label for="Subject">Subject</label>    
+                        </div>
+                        <div class="col span-2-of-3">
+                            <input type="subject" name="subject" id="subject" placeholder="Your Subject" required>
+                        </div>
+                    </div>
 
                     <div class="row">
                         <div class="col span-1-of-3">
                             <label>Message</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <textarea name="message" placeholder="Your Message"></textarea>
+                            <textarea name="body" placeholder="Your Message" id='message'></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -303,7 +311,7 @@
                             <label>&nbsp;</label>    
                         </div>
                         <div class="col span-2-of-3 js--wp-5">
-                            <input type="submit" value="Send">
+                            <input type="submit" value="Send" class="emailSubmit">
                         </div>
                     </div>
                 </form>

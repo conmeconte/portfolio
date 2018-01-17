@@ -100,11 +100,65 @@ function initializeApp() {
         $('.project-hover').css('visibility', 'hidden');
         $('.project-photo img').removeAttr('id');
         // event.target.removeAttribute('id');
+    });
 
+ 
 
+        /* stop form from submitting normally */
+  
+    $('.emailSubmit').click((event)=>{
+        event.preventDefault();
 
+        $.ajax({
+            url:"./mail_handler.php",
+            method: "POST",
+            data:{
+                name: $('#name').val(),
+                email: $('#email').val(),
+                subject:$('#subject').val(),
+                body: $('#message').val()
+            },
+            dataType: 'JSON', 
+            success: function(data){
+                if(data.success){
+                    console.log('successful email sent', data);
+                }
+                else{
+                    console.log('error', data);
+                }
+            },
+            error: function(error){
+                console.log('did\'nt go through', error);
+            }
 
-    })
+        })
+    });
+    
+    // $(".emailSubmit").submit(function(event) {
+    //     $.ajax({
+    //         url:"/mail_handler.php",
+    //         method: "POST",
+    //         data:{
+    //             name: $('#name').val(),
+    //             email: $('#email').val(),
+    //             subject:$('#subject').val(),
+    //             body: $('#message').val()
+    //         },
+    //         dataType: JSON, 
+    //         success: function(data){
+    //             if(data.sucess){
+    //                 console.log('successful email sent', data);
+    //             }
+    //             else{
+    //                 console.log('error', data);
+    //             }
+    //         },
+    //         error: function(){
+    //             console.log('did\'nt go through');
+    //         }
+
+    //     })
+    // })    
 }
 
 
