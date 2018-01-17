@@ -110,7 +110,7 @@ function initializeApp() {
         event.preventDefault();
 
         $.ajax({
-            url:"./mail_handler.php",
+            url:"/mail_handler.php",
             method: "POST",
             data:{
                 name: $('#name').val(),
