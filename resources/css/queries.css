@@ -114,10 +114,15 @@
     }
     .works-step {margin-bottom: 20px;}
     .works-step:last-of-type {margin-bottom: 20px;}
+    #particles-js{
+        height: 100%;
+    }
+    
+    .project-showcase li{
+        width: 50%;
+    }
 }
-#particles-js{
-    height: 100%;
-}
+
 
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {

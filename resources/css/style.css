@@ -182,6 +182,7 @@ input[type=submit] {
     text-decoration: none;
     border-radius: 200px;
     -webkit-transition: background-color 0.2s;
+    -webkit-transition: background-color 0.2s,border 0.2s, color 0.2s;
     transition: background-color 0.2s,border 0.2s, color 0.2s;
     
     
@@ -438,7 +439,7 @@ header .row{
 
 
 /*-----------------------------------------*/
-/* HOW IT WORKS*/
+/* SKILLS*/
 /*-----------------------------------------*/
 
 .section-skills{
@@ -620,7 +621,8 @@ footer p {
 .js--wp-3,
 .js--wp-4{
     opacity: 0;
-    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
 }
 
 .js-wp-1.animated,
