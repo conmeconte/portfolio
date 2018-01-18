@@ -107,7 +107,8 @@
         width:25%; 
         left: 25%;
         position: relative;
-        transform: translateX(50%);
+        -webkit-transform: translateX(50%);
+                transform: translateX(50%);
     }
     .project-hover h5, a:link, a:visited{
         font-size:80%;
@@ -120,7 +121,7 @@
     
     .project-showcase li{
         width: 50%;
-    }
+    }   
 }
 
 
