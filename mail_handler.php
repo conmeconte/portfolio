@@ -28,10 +28,10 @@ if(empty($message['message'])){
 }
 //Sanitize subject
 $message['subject'] = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
-// if(empty($message['subject'])){
-//     $output['success'] = false;
-//     $output['messages'][] = 'missing subject key';
-// }
+if(empty($message['subject'])){
+    $output['success'] = false;
+    $output['messages'][] = 'missing subject key';
+}
 
 if ($output['success'] !== null) {
     http_response_code(400);
@@ -60,9 +60,7 @@ $options = array(
     )
 );
 $mail->smtpConnect($options);
-// $mail->From = 'chhongserver@gmail.com';  // sender's email address (shows in "From" field)
 $mail->From = $message['email'];  // sender's email address (shows in "From" field)
-// $mail->FromName = $_POST['name'];   // sender's name (shows in "From" field)
 $mail->FromName = $message['name'];   // sender's name (shows in "From" field)
 $mail->addAddress(EMAIL_SENDTO);  // Add a recipient
 //$mail->addAddress('ellen@example.com');                        // Name is optional
@@ -77,11 +75,9 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject =$message['subject'];
 // $mail->Body    = 'This is the HTML message body <b>in bold!</b>'; //ex $_POST['body']
-// $mail->Body    = $_POST['body']; //ex $_POST['body']
 $mail->Body    = $message['message']; //ex $_POST['body']
 // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients'; //ex htmlentities($_POST['body'])
 $mail->AltBody = htmlentities($message['message']); //ex htmlentities($_POST['body'])
-// $mail->AltBody = htmlentities($_POST['body']); //ex htmlentities($_POST['body'])
 
 
 
