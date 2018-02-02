@@ -400,13 +400,14 @@ header .row{
     height: 100%;
     background-color: #00000057;;
     text-align: center; 
-    padding: 15%;
+    transition-duration: 0.1s; 
+    /* padding: 15%; */
 
 }
 
 .project-hover div{
+    height:100%;
     background-color: #ffffffd1;
-    border-radius: 15%; 
     position: relative;
     top: 50%;
     left: 50%;
@@ -416,11 +417,14 @@ header .row{
 }
 .project-hover a{
     border-bottom: 0; 
+    transition-delay: 0.1s; 
 }
 .project-hover h5, a:link, a:visited{
     color: #27aadf;
     font-size: 140%;
-    /* padding: 5px;  */
+    padding: 10%;
+    padding-bottom:5%;  
+    transition-delay: 0.2s;
 }
 
 .project-hover a:link, a:visited{
