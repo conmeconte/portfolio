@@ -333,7 +333,7 @@ header .row{
 .section-features .long-copy {margin-bottom: 30px;}
 
 #myPicture{
-    margin-top:10%;
+    margin-top:5%;
 }
 #myPicture img{
     width: 100%;
@@ -417,7 +417,8 @@ header .row{
 }
 .project-hover a{
     border-bottom: 0; 
-    transition-delay: 0.1s; 
+    transition-delay: 0.1s;
+    visibility:inherit;  
 }
 .project-hover h5, a:link, a:visited{
     color: #27aadf;
