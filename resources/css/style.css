@@ -427,6 +427,14 @@ header .row{
     padding-bottom:5%;  
     transition-delay: 0.2s;
 }
+.project-hover button{
+    border: none;
+    padding: 1vmin;
+    border-radius: 11%;
+    background-color: #1eeabb;
+    color: white;
+    vertical-align:top; 
+}
 
 .project-hover a:link, a:visited{
     /* bottom:0;  */
