@@ -111,7 +111,7 @@
                 transform: translateX(50%);
     }
     .project-hover h5, a:link, a:visited{
-        font-size:80%;
+        font-size:100%;
     }
     .works-step {margin-bottom: 20px;}
     .works-step:last-of-type {margin-bottom: 20px;}
