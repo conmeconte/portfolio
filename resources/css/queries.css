@@ -34,6 +34,13 @@
     }
     .contact-form {width: 80%;}
 
+    .project-hover a:link{
+        font-size: 3vmin; 
+    }
+    .project-hover p{
+        font-size: 3vmin; 
+    }
+
 }
 
 /* Small phones to small tablets  from 481px to 767px*/ 
