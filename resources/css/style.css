@@ -333,7 +333,7 @@ header .row{
 .section-features .long-copy {margin-bottom: 30px;}
 
 #myPicture{
-    margin-top:10%;
+    margin-top:5%;
 }
 #myPicture img{
     width: 100%;
@@ -400,13 +400,14 @@ header .row{
     height: 100%;
     background-color: #00000057;;
     text-align: center; 
-    padding: 15%;
+    transition-duration: 0.1s; 
+    /* padding: 15%; */
 
 }
 
 .project-hover div{
+    height:100%;
     background-color: #ffffffd1;
-    border-radius: 15%; 
     position: relative;
     top: 50%;
     left: 50%;
@@ -416,11 +417,38 @@ header .row{
 }
 .project-hover a{
     border-bottom: 0; 
+    transition-delay: 0.1s;
+    visibility:inherit;  
+}
+.project-hover a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    padding: 2%; 
+    height: 15%;
+    width: 20%; 
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 100%; 
+    background-color: #27aadf;
+    vertical-align: super;
+
 }
 .project-hover h5, a:link, a:visited{
     color: #27aadf;
     font-size: 140%;
-    /* padding: 5px;  */
+    padding: 10%;
+    padding-bottom:5%;  
+    transition-delay: 0.2s;
+}
+.project-hover button{
+    border: none;
+    padding: 1vmin;
+    border-radius: 11%;
+    background-color: #1eeabb;
+    color: white;
+    vertical-align:top; 
 }
 
 .project-hover a:link, a:visited{
