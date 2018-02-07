@@ -138,10 +138,10 @@
     section { padding: 25px 0;}
     .contact-form {width: 100%;}
     .project-hover a:link{
-        font-size: 3vmin; 
+        font-size: 10px; 
     }
     .project-hover p{
-        font-size: 3vmin; 
+        font-size: 12px; 
     }
     
 }
