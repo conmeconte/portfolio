@@ -433,6 +433,8 @@ header .row{
     font-size: 100%; 
     background-color: #27aadf;
     vertical-align: super;
+    border-radius:5%; 
+    border:none; 
 
 }
 .project-hover h5, a:link, a:visited{
