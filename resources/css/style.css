@@ -420,6 +420,10 @@ header .row{
     transition-delay: 0.1s;
     visibility:inherit;  
 }
+.project-hover p{
+    margin-top: 10px; 
+
+}
 .project-hover a.button {
     -webkit-appearance: button;
     -moz-appearance: button;

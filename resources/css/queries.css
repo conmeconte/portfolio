@@ -6,6 +6,13 @@
         padding: 0 2%;
     }
     .row {padding: 0 2%;}
+    .project-hover a:link{
+        font-size: 15px; 
+    }
+    .project-hover p{
+        font-size: 13px; 
+    }
+
 }
 
 /* Small tablet to big tablet: from 768px to 1023px */
@@ -34,12 +41,6 @@
     }
     .contact-form {width: 80%;}
 
-    .project-hover a:link{
-        font-size: 3vmin; 
-    }
-    .project-hover p{
-        font-size: 3vmin; 
-    }
 
 }
 
@@ -136,5 +137,11 @@
 @media only screen and (max-width: 480px) {
     section { padding: 25px 0;}
     .contact-form {width: 100%;}
+    .project-hover a:link{
+        font-size: 3vmin; 
+    }
+    .project-hover p{
+        font-size: 3vmin; 
+    }
     
 }
