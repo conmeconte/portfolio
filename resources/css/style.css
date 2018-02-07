@@ -424,7 +424,7 @@ header .row{
     margin-top: 10px; 
 
 }
-.project-hover a.button {
+.project-hover a.buttons {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
