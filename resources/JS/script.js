@@ -78,6 +78,9 @@ function initializeApp() {
             icon.removeClass('ion-close-round');
             nav.slideToggle();
         }
+        if($('.modal')[0].style.display){
+            $('.modal').hide();
+        }
    })
 
 
@@ -116,49 +119,30 @@ function initializeApp() {
                 name: $('#name').val(),
                 email: $('#email').val(),
                 subject:$('#subject').val(),
-                body: $('#message').val()
+                message: $('#message').val()
             },
             dataType: 'JSON', 
             success: function(data){
                 if(data.success){
-                    console.log('successful email sent', data);
+                    $('.modal-content p').text("Mail was sent out successfully, I will get back on you as soon as possible. Thank you for your interest")
+                    $('.modal').show();
                 }
                 else{
-                    console.log('error', data);
+                    $('.modal-content p').text('Something went wrong')
                 }
             },
             error: function(error){
-                console.log('did\'nt go through', error);
+                $('.modal-content p').text(error);
             }
 
-        })
+        });
+    });
+
+    $('.close').click(()=>{
+        $('.modal').hide();
     });
     
-    // $(".emailSubmit").submit(function(event) {
-    //     $.ajax({
-    //         url:"/mail_handler.php",
-    //         method: "POST",
-    //         data:{
-    //             name: $('#name').val(),
-    //             email: $('#email').val(),
-    //             subject:$('#subject').val(),
-    //             body: $('#message').val()
-    //         },
-    //         dataType: JSON, 
-    //         success: function(data){
-    //             if(data.sucess){
-    //                 console.log('successful email sent', data);
-    //             }
-    //             else{
-    //                 console.log('error', data);
-    //             }
-    //         },
-    //         error: function(){
-    //             console.log('did\'nt go through');
-    //         }
 
-    //     })
-    // })    
 }
 
 

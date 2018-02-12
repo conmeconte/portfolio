@@ -7,8 +7,8 @@
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
     
 }
 
@@ -333,7 +333,7 @@ header .row{
 .section-features .long-copy {margin-bottom: 30px;}
 
 #myPicture{
-    margin-top:10%;
+    margin-top:5%;
 }
 #myPicture img{
     width: 100%;
@@ -400,13 +400,14 @@ header .row{
     height: 100%;
     background-color: #00000057;;
     text-align: center; 
-    padding: 15%;
+    transition-duration: 0.1s; 
+    /* padding: 15%; */
 
 }
 
 .project-hover div{
+    height:100%;
     background-color: #ffffffd1;
-    border-radius: 15%; 
     position: relative;
     top: 50%;
     left: 50%;
@@ -416,11 +417,44 @@ header .row{
 }
 .project-hover a{
     border-bottom: 0; 
+    transition-delay: 0.1s;
+    visibility:inherit;  
+}
+.project-hover p{
+    margin-top: 10px; 
+
+}
+.project-hover a.abuttons {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    padding: 3%; 
+    height: 15%;
+    width: 20%; 
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 100%; 
+    background-color: #27aadf;
+    vertical-align: super;
+    /* border-radius:5%;  */
+    border:none; 
+
 }
 .project-hover h5, a:link, a:visited{
     color: #27aadf;
     font-size: 140%;
-    /* padding: 5px;  */
+    padding: 10%;
+    padding-bottom:5%;  
+    transition-delay: 0.2s;
+}
+.project-hover button{
+    border: none;
+    padding: 1vmin;
+    border-radius: 11%;
+    background-color: #1eeabb;
+    color: white;
+    vertical-align:top; 
 }
 
 .project-hover a:link, a:visited{
@@ -612,7 +646,52 @@ footer p {
     text-align: center;
     margin-top: 20px;
 }
+/*-----------------------------------------*/
+/* FOOTER*/
+/*-----------------------------------------*/
 
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 40% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    height: 10%;
+    text-align: center; 
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 1px;
+
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 /*-----------------------------------------*/
 /* FOOTER*/
 /*-----------------------------------------*/
