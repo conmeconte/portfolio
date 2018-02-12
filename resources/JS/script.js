@@ -16,6 +16,9 @@ function initializeApp() {
     });
 
     /* button scroll                   */
+    $('.js--scroll-to-home').click(function(){
+        $('html,body').animate({scrollTop: $('header').offset().top - 100}, 1000);
+    });
     $('.js--scroll-to-projects').click(function(){
         $('html,body').animate({scrollTop: $('.section-projects').offset().top - 100}, 1000);
     });
