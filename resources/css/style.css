@@ -413,8 +413,8 @@ header .row{
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
 }
+
 .project-hover a{
     border-bottom: 0; 
     transition-delay: 0.1s;
@@ -425,20 +425,18 @@ header .row{
 
 }
 .project-hover a.abuttons {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    padding: 3%; 
-    height: 15%;
-    width: 20%; 
+
+    /* padding: 3%;  */
+    /* height: 15%; */
+    /* width: 20%;  */
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 100%; 
-    background-color: #27aadf;
-    vertical-align: super;
+    /* font-size: 100%;  */
+    font-size: 1.5vw; 
+    /* vertical-align: super; */
     /* border-radius:5%;  */
-    border:none; 
+    /* border:none;  */
 
 }
 .project-hover h5, a:link, a:visited{
@@ -452,7 +450,8 @@ header .row{
     border: none;
     padding: 1vmin;
     border-radius: 11%;
-    background-color: #1eeabb;
+    width:25%;
+    background-color: #27aadf;
     color: white;
     vertical-align:top; 
 }
@@ -574,9 +573,11 @@ footer {
 
 .footer-nav {
     list-style: none;
-    float:left
-        
+    float:left;
 }
+.footer-nav a{
+}
+
 
 .social-links {
     list-style: none;
@@ -595,8 +596,8 @@ footer {
     margin: 0;   
 }
 
-.footer-nav li a:link, 
-.footer-nav li a:visited,
+.footer-nav a:link, 
+.footer-nav a:visited,
 .social-links li a:link,
 .social-links li a:visited {
     text-decoration: none;

@@ -7,10 +7,14 @@
     }
     .row {padding: 0 2%;}
     .project-hover a:link{
-        font-size: 15px; 
+        font-size: small; 
     }
     .project-hover p{
         font-size: 13px; 
+    }
+    .project-hover a.abuttons{
+        width: 25%; 
+        height:20%; 
     }
 
 }
@@ -40,6 +44,10 @@
         font-size: 250%;
     }
     .contact-form {width: 80%;}
+    /* .project-hover a.abuttons{
+        width: 20%; 
+        height:15%; 
+    } */
 
 
 }
@@ -130,6 +138,13 @@
     .project-showcase li{
         width: 50%;
     }   
+    .footer-nav{
+        display:none; 
+    }
+    .project-hover a.abuttons{
+        width: 25%; 
+        height:15%; 
+    }
 }
 
 
