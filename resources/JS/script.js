@@ -118,37 +118,56 @@ function initializeApp() {
   
     $('.emailSubmit').click((event)=>{
         event.preventDefault();
+        var inpObj = document.getElementById('email');
+        var inpObj2 = document.getElementById('message');
+        if (!inpObj.checkValidity()) {
+            alert("Please enter a valid email address");
+        } else if(!inpObj2.checkValidity()){
+            alert("Please enter a message");
+        } else{
+            $('*').css({ 'cursor': 'progress' });
+            $.ajax({
+                url:"./mail_handler.php",
+                method: "POST",
+                data:{
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    subject:$('#subject').val(),
+                    message: $('#message').val()
+                },
+                dataType: 'JSON', 
+                success: function(data){
+                    if(data.success){
+                        $('.modal-content p').text("Mail was sent out successfully, I will get back on you as soon as possible. Thank you for your interest")
+                        $('.modal').show();
+                        $('*').css({ 'cursor': 'default' });
 
-        $.ajax({
-            url:"./mail_handler.php",
-            method: "POST",
-            data:{
-                name: $('#name').val(),
-                email: $('#email').val(),
-                subject:$('#subject').val(),
-                message: $('#message').val()
-            },
-            dataType: 'JSON', 
-            success: function(data){
-                if(data.success){
-                    $('.modal-content p').text("Mail was sent out successfully, I will get back on you as soon as possible. Thank you for your interest")
-                    $('.modal').show();
-                }
-                else{
-                    $('.modal-content p').text('Something went wrong')
-                }
-            },
-            error: function(error){
-                $('.modal-content p').text(error);
-            }
+                    }
+                    else{
+                        $('.modal-content p').text('Something went wrong')
+                        $('*').css({ 'cursor': 'default' });
 
-        });
+                    }
+                },
+                error: function(error){
+                    $('.modal-content p').text(error);
+                    $('*').css({ 'cursor': 'default' });
+
+                }
+    
+            });
+        }
+        
     });
 
     $('.close').click(()=>{
         $('.modal').hide();
     });
     
+    //Form Validation:
+
+
+
 
 }
 
