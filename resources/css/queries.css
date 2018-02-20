@@ -17,6 +17,7 @@
         height:20%; 
     }
 
+
 }
 
 /* Small tablet to big tablet: from 768px to 1023px */
@@ -43,7 +44,25 @@
     .plan-price {
         font-size: 250%;
     }
+    
     .contact-form {width: 80%;}
+
+    .project-showcase li{
+        width: 50%;
+    }   
+
+    .project-hover a.abuttons{
+        width: 25%; 
+        height:15%; 
+    }
+    .project-hover p {
+        font-size: 30px;
+    }
+    .project-p i {
+        font-size: 350%;
+        color: #27aadf;
+    }
+
 
 }
 
@@ -134,19 +153,12 @@
         height: 100%;
     }
     
-    .project-showcase li{
-        width: 50%;
-    }   
+
     .footer-nav{
         display:none; 
     }
-    .project-hover a.abuttons{
-        width: 25%; 
-        height:15%; 
-    }
     .modal-content {
         min-height: 20%; 
-        font-size: 
     }
 }
 

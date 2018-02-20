@@ -362,7 +362,7 @@ header .row{
 /*-----------------------------------------*/
 
 .section-projects {
-    padding: 0px;
+    padding-top: 60px;
 }
 
 .project-showcase {
@@ -486,7 +486,7 @@ header .row{
 
 } */
 .project-p i{
-    font-size: 190%;
+    font-size: 250%;
     color: #27aadf;
 
 }
@@ -553,7 +553,10 @@ cite img {
 /*-----------------------------------------*/
 /* contact*/
 /*-----------------------------------------*/
+.section-form{
+    background-color: #f4f4f4;
 
+}
 .contact-form {
     width: 60%;
     margin: 0 auto;
