@@ -154,7 +154,7 @@ h3 {
 
 /* -------------- LINKS -------*/
 
-a:link,
+/* a:link,
 a:visited {
     color: #27aadf;
     text-decoration: none;
@@ -162,7 +162,7 @@ a:visited {
     padding-bottom: 1px;
     -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
-}
+} */
 
 a:hover, 
 a:active {
@@ -267,11 +267,24 @@ header .row{
 .main-nav li {
     display: inline-block;
     margin-left: 40px;
-    font-size: 150%;
     color: #fff;
 }
+.main-nav li a{
+    text-decoration: none; 
+    color: white; 
+    font-size: 125%; 
 
-.main-nav li a:link,
+}
+.main-nav li a:hover, 
+.main-nav li a:active {
+    color: #27aadf;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    font-size: 125%; 
+
+}
+
+/* .main-nav li a:link,
 .main-nav li a:visited {
 
     text-decoration: none;
@@ -281,7 +294,7 @@ header .row{
     -webkit-transition: border-bottom 0.2s; 
     transition: border-bottom 0.2s;
     padding: 8px 0px;
-}
+} */
     
 .main-nav li a:hover,
 .main-nav li a:active {
@@ -439,7 +452,7 @@ header .row{
     /* border:none;  */
 
 }
-.project-hover h5, a:link, a:visited{
+.project-hover h5{
     color: #27aadf;
     font-size: 140%;
     padding: 10%;
@@ -454,6 +467,7 @@ header .row{
     background-color: #27aadf;
     color: white;
     vertical-align:top; 
+    margin-right: 5px; 
 }
 
 .project-hover a:link, a:visited{
