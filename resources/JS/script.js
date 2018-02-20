@@ -88,25 +88,29 @@ function initializeApp() {
 
 
 
-/*Proejcts hovering*/
+/*Projects hovering*/
     $('.project-photo').hover(
         ()=>{
         // $('.project-hover').css('visibility', 'visible');
-        try{
-            event.target.nextElementSibling.style.visibility = "visible"
-            event.target.setAttribute("id", "project-photo-selected")
+            try{
+                event.target.nextElementSibling.style.visibility = "visible"
+                event.target.setAttribute("id", "project-photo-selected")
 
-        }
-        catch(error){
-            console.log(error);
-        }
-        // $('.project-photo img').attr('id','project-photo-selected');
-    },
+            }
+            catch(error){
+                console.log(error);
+            }
+        },
         ()=>{
-        $('.project-hover').css('visibility', 'hidden');
-        $('.project-photo img').removeAttr('id');
-        // event.target.removeAttribute('id');
-    });
+            try{
+                $('.project-hover').css('visibility', 'hidden');
+                $('.project-photo img').removeAttr('id');
+                // event.target.removeAttribute('id');
+            }
+            catch(error){
+                console.log(error); 
+            }
+        });
 
  
 
