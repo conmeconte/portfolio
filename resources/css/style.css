@@ -16,7 +16,8 @@ html,
 body{
     background-color: #fff;
     color: #555;
-    font-family: "Lato", "Arial", sans-serif;
+    /* font-family: "Roboto Slab", "Arial", sans-serif; */
+    font-family: "Rubik", serif; 
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
