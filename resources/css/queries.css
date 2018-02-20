@@ -149,6 +149,10 @@
         width: 25%; 
         height:15%; 
     }
+    .modal-content {
+        min-height: 20%; 
+        font-size: 
+    }
 }
 
 

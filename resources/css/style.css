@@ -96,6 +96,11 @@ h2 {
     letter-spacing: 1px;
 }
 
+.section-projects>h2{
+    margin: 30px 0;
+
+}
+
 
 
 h2:after {
@@ -426,6 +431,7 @@ header .row{
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    padding: 20px;
 }
 
 .project-hover a{
@@ -687,8 +693,12 @@ footer p {
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 
-    height: 10%;
+    height: 15%;
     text-align: center; 
+}
+.modal-content p {
+    top: 50%;
+    transform: translateY(50%);
 }
 
 /* The Close Button */
