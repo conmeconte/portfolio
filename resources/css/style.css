@@ -16,7 +16,8 @@ html,
 body{
     background-color: #fff;
     color: #555;
-    font-family: "Lato", "Arial", sans-serif;
+    /* font-family: "Roboto Slab", "Arial", sans-serif; */
+    font-family: "Rubik", serif; 
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
@@ -96,6 +97,11 @@ h2 {
     letter-spacing: 1px;
 }
 
+.section-projects>h2{
+    margin: 30px 0;
+
+}
+
 
 
 h2:after {
@@ -154,15 +160,7 @@ h3 {
 
 /* -------------- LINKS -------*/
 
-/* a:link,
-a:visited {
-    color: #27aadf;
-    text-decoration: none;
-    border-bottom: 1px solid #27aadf;
-    padding-bottom: 1px;
-    -webkit-transition: border-bottom 0.2s, color 0.2s;
-    transition: border-bottom 0.2s, color 0.2s;
-} */
+
 
 a:hover, 
 a:active {
@@ -185,7 +183,6 @@ input[type=submit] {
     -webkit-transition: background-color 0.2s,border 0.2s, color 0.2s;
     transition: background-color 0.2s,border 0.2s, color 0.2s;
     
-    
 }
 
 
@@ -196,7 +193,6 @@ input[type=submit] {
     border: 1px solid #27aadf;
     color: #fff; 
     margin-right: 15px;
-    
 }
 
 .btn-ghost:link,
@@ -220,6 +216,10 @@ input[type=submit]:active {
 input[type=submit] {
     border: 1px solid #27aadf;
     
+}
+input[type=submit]{
+    float:right;
+    margin:0; 
 }
 
 .btn-ghost:hover,
@@ -356,7 +356,7 @@ header .row{
 /*-----------------------------------------*/
 
 .section-projects {
-    padding: 0px;
+    padding-top: 60px;
 }
 
 .project-showcase {
@@ -392,12 +392,7 @@ header .row{
     transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
-/* .project-photo img:hover {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
-    opacity: 1;
-    
-} */
+
 #project-photo-selected {
     -webkit-transform: scale(1.03);
             transform: scale(1.03);
@@ -406,7 +401,7 @@ header .row{
 }
 
 .project-hover{
-    visibility: hidden;
+    display: none;
     position: absolute;
     top: 0;
     width: 100%;
@@ -417,6 +412,9 @@ header .row{
     /* padding: 15%; */
 
 }
+.project-hover:hover{
+    visibility:visible;
+}
 
 .project-hover div{
     height:100%;
@@ -426,6 +424,7 @@ header .row{
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    padding: 20px;
 }
 
 .project-hover a{
@@ -467,7 +466,7 @@ header .row{
     background-color: #27aadf;
     color: white;
     vertical-align:top; 
-    margin-right: 5px; 
+    margin-right: 10px; 
 }
 
 .project-hover a:link, a:visited{
@@ -479,7 +478,7 @@ header .row{
 
 } */
 .project-p i{
-    font-size: 190%;
+    font-size: 250%;
     color: #27aadf;
 
 }
@@ -546,7 +545,10 @@ cite img {
 /*-----------------------------------------*/
 /* contact*/
 /*-----------------------------------------*/
+.section-form{
+    background-color: #f4f4f4;
 
+}
 .contact-form {
     width: 60%;
     margin: 0 auto;
@@ -687,8 +689,12 @@ footer p {
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 
-    height: 10%;
+    height: 15%;
     text-align: center; 
+}
+.modal-content p {
+    top: 50%;
+    transform: translateY(50%);
 }
 
 /* The Close Button */
