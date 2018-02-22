@@ -160,15 +160,7 @@ h3 {
 
 /* -------------- LINKS -------*/
 
-/* a:link,
-a:visited {
-    color: #27aadf;
-    text-decoration: none;
-    border-bottom: 1px solid #27aadf;
-    padding-bottom: 1px;
-    -webkit-transition: border-bottom 0.2s, color 0.2s;
-    transition: border-bottom 0.2s, color 0.2s;
-} */
+
 
 a:hover, 
 a:active {
@@ -398,12 +390,7 @@ header .row{
     transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
-/* .project-photo img:hover {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
-    opacity: 1;
-    
-} */
+
 #project-photo-selected {
     -webkit-transform: scale(1.03);
             transform: scale(1.03);
@@ -412,7 +399,7 @@ header .row{
 }
 
 .project-hover{
-    visibility: hidden;
+    display: none;
     position: absolute;
     top: 0;
     width: 100%;
@@ -422,6 +409,9 @@ header .row{
     transition-duration: 0.1s; 
     /* padding: 15%; */
 
+}
+.project-hover:hover{
+    visibility:visible;
 }
 
 .project-hover div{
