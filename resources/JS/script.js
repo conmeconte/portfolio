@@ -88,24 +88,28 @@ function initializeApp() {
 
 
 
-/*Proejcts hovering*/
+/*Projects hovering*/
     $('.project-photo').hover(
         ()=>{
         // $('.project-hover').css('visibility', 'visible');
-        try{
-            event.target.nextElementSibling.style.visibility = "visible"
-            event.target.setAttribute("id", "project-photo-selected")
+            try{
+                event.target.nextElementSibling.style.display = "block"
+                event.target.setAttribute("id", "project-photo-selected")
 
-        }
-        catch(error){
-            console.log(error);
-        }
-        // $('.project-photo img').attr('id','project-photo-selected');
-    },
+            }
+            catch(error){
+                console.log(error);
+            }
+        },
         ()=>{
-        $('.project-hover').css('visibility', 'hidden');
-        $('.project-photo img').removeAttr('id');
-        // event.target.removeAttribute('id');
+            try{
+                $('.project-hover').css('display', 'none');
+                $('.project-photo img').removeAttr('id');
+                // event.target.removeAttribute('id');
+            }
+            catch(error){
+                console.log(error); 
+            }
     });
 
  
@@ -113,8 +117,14 @@ function initializeApp() {
         /* stop form from submitting normally */
   
     $('.emailSubmit').click((event)=>{
+        
+        var inpObj = document.getElementById('email');
+        var inpObj2 = document.getElementById('message');
+        if (!inpObj.checkValidity() || !inpObj2.checkValidity()) {
+            return
+        }
         event.preventDefault();
-
+        $('*').css({ 'cursor': 'progress' });
         $.ajax({
             url:"./mail_handler.php",
             method: "POST",
@@ -129,22 +139,36 @@ function initializeApp() {
                 if(data.success){
                     $('.modal-content p').text("Mail was sent out successfully, I will get back on you as soon as possible. Thank you for your interest")
                     $('.modal').show();
+                    $('*').css({ 'cursor': 'default' });
+
                 }
                 else{
-                    $('.modal-content p').text('Something went wrong')
+                    $('.modal-content p').text('Something went wrong, please try later')
+                    $('.modal').show();
+                    $('*').css({ 'cursor': 'default' });
+
                 }
             },
             error: function(error){
-                $('.modal-content p').text(error);
+                $('.modal-content p').text("Please try later");
+                $('.modal').show();
+                $('*').css({ 'cursor': 'default' });
+
             }
 
         });
+        
+        
     });
 
     $('.close').click(()=>{
         $('.modal').hide();
     });
     
+    //Form Validation:
+
+
+
 
 }
 
