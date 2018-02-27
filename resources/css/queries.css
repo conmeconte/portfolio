@@ -144,7 +144,12 @@
         -webkit-transform: translateX(50%);
                 transform: translateX(50%);
     }
-    .project-hover h5, a:link, a:visited{
+    .project-hover h5{
+        font-size: 130%; 
+    }
+    .project-hover a:link,
+    .project-hover a:visited,
+    .project-hover p{
         font-size:100%;
     }
     .works-step {margin-bottom: 20px;}

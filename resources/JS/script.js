@@ -93,7 +93,7 @@ function initializeApp() {
         ()=>{
         // $('.project-hover').css('visibility', 'visible');
             try{
-                event.target.nextElementSibling.style.visibility = "visible"
+                event.target.nextElementSibling.style.display = "block"
                 event.target.setAttribute("id", "project-photo-selected")
 
             }
@@ -103,60 +103,61 @@ function initializeApp() {
         },
         ()=>{
             try{
-                $('.project-hover').css('visibility', 'hidden');
+                $('.project-hover').css('display', 'none');
                 $('.project-photo img').removeAttr('id');
                 // event.target.removeAttribute('id');
             }
             catch(error){
                 console.log(error); 
             }
-        });
+    });
 
  
 
         /* stop form from submitting normally */
   
     $('.emailSubmit').click((event)=>{
-        event.preventDefault();
+        
         var inpObj = document.getElementById('email');
         var inpObj2 = document.getElementById('message');
-        if (!inpObj.checkValidity()) {
-            alert("Please enter a valid email address");
-        } else if(!inpObj2.checkValidity()){
-            alert("Please enter a message");
-        } else{
-            $('*').css({ 'cursor': 'progress' });
-            $.ajax({
-                url:"./mail_handler.php",
-                method: "POST",
-                data:{
-                    name: $('#name').val(),
-                    email: $('#email').val(),
-                    subject:$('#subject').val(),
-                    message: $('#message').val()
-                },
-                dataType: 'JSON', 
-                success: function(data){
-                    if(data.success){
-                        $('.modal-content p').text("Mail was sent out successfully, I will get back on you as soon as possible. Thank you for your interest")
-                        $('.modal').show();
-                        $('*').css({ 'cursor': 'default' });
-
-                    }
-                    else{
-                        $('.modal-content p').text('Something went wrong')
-                        $('*').css({ 'cursor': 'default' });
-
-                    }
-                },
-                error: function(error){
-                    $('.modal-content p').text(error);
+        if (!inpObj.checkValidity() || !inpObj2.checkValidity()) {
+            return
+        }
+        event.preventDefault();
+        $('*').css({ 'cursor': 'progress' });
+        $.ajax({
+            url:"./mail_handler.php",
+            method: "POST",
+            data:{
+                name: $('#name').val(),
+                email: $('#email').val(),
+                subject:$('#subject').val(),
+                message: $('#message').val()
+            },
+            dataType: 'JSON', 
+            success: function(data){
+                if(data.success){
+                    $('.modal-content p').text("Mail was sent out successfully, I will get back on you as soon as possible. Thank you for your interest")
+                    $('.modal').show();
                     $('*').css({ 'cursor': 'default' });
 
                 }
-    
-            });
-        }
+                else{
+                    $('.modal-content p').text('Something went wrong, please try later')
+                    $('.modal').show();
+                    $('*').css({ 'cursor': 'default' });
+
+                }
+            },
+            error: function(error){
+                $('.modal-content p').text("Please try later");
+                $('.modal').show();
+                $('*').css({ 'cursor': 'default' });
+
+            }
+
+        });
+        
         
     });
 
