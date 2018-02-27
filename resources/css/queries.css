@@ -178,4 +178,12 @@
         height: 20%;
         width: 25%;
     }
+    .project-hover div{
+        padding: 0;
+    }
+    .project-hover h5{
+        font-size: 100%;
+        padding: 10px 0; 
+    }
+
 }
