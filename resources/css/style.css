@@ -430,7 +430,8 @@ header .row{
 .project-hover a{
     border-bottom: 0; 
     transition-delay: 0.1s;
-    visibility:inherit;  
+    visibility:inherit;
+    text-decoration: none;  
 }
 .project-hover p{
     margin-top: 10px; 
