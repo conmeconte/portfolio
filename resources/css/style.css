@@ -587,6 +587,10 @@ input[type=checkbox] {
     color: red; 
 }
 
+form span{
+    pointer-events: none; 
+}
+
 /*-----------------------------------------*/
 /* FOOTER*/
 /*-----------------------------------------*/
@@ -703,7 +707,7 @@ footer p {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 40% auto; 
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 

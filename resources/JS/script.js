@@ -180,6 +180,11 @@ function initializeApp() {
         
         
     });
+    $('body').click(function() {
+        if(event.target.className === "modal"){
+            $('.modal').css({display: 'none'});
+        }
+    });
 
     $('.close').click(()=>{
         $('.modal').hide();
