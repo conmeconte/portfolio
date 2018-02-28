@@ -203,7 +203,7 @@ input[type=button] {
 .btn-ghost:visited {
     border: 1px solid #27aadf;
     color: #27aadf;
-    background-color: #ffffff59;
+    background-color: #ffffffc4;
 }
 
 
@@ -271,6 +271,14 @@ header .row{
 .headerLogo{
     float: left; 
     font-size: 125%; 
+    cursor: pointer; 
+    border-bottom: 2px solid transparent;
+
+}
+
+.headerLogo:hover{
+    border-bottom: 2px solid #27aadf;
+
 }
     
 .main-nav li {
@@ -282,23 +290,20 @@ header .row{
     text-decoration: none; 
     color: white; 
     font-size: 125%; 
+    border-bottom: 2px solid transparent;
+
 
 }
 .main-nav li a:hover, 
 .main-nav li a:active {
     color: #27aadf;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid #27aadf;
     cursor: pointer;
     font-size: 125%; 
 
 }
 
 
-    
-.main-nav li a:hover,
-.main-nav li a:active {
-    border-bottom: 2px solid #27aadf;
-}
 
 /* Mobile Navi */
 
@@ -323,6 +328,24 @@ header .row{
     -webkit-box-shadow: 0 2px 2px #efefef;
             box-shadow: 0 2px 2px #efefef;
     z-index: 9999;
+}
+
+
+.sticky .headerLogo.main-nav{
+    float: left; 
+    font-size: 125%; 
+    cursor: pointer; 
+    border-bottom: 2px solid transparent;
+    margin: 0; 
+
+}
+
+.sticky .headerLogo p{
+    padding: 16px 0;
+}
+
+.sticky .headerLogo:hover{
+    border-bottom: 2px solid #27aadf;
 }
 
 .sticky .main-nav {margin: 18px 0;}

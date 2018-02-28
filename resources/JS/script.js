@@ -62,13 +62,24 @@ function initializeApp() {
     $('.js--nav-icon').click(()=>{
         var nav = $('.js--main-nav');
         var icon = $('.js--nav-icon i')
-        nav.slideToggle(200);
+        var logo= $('.headerLogo')
+        // logo.toggle();
+        nav.slideToggle(200,()=>{
+            if(icon.hasClass('ion-navicon-round')){
+                logo.css({display: "block"})
+            }
+        });
         if(icon.hasClass('ion-navicon-round')){
             icon.addClass('ion-close-round');
             icon.removeClass('ion-navicon-round');
+            logo.css({display: "none"});
+
         } else{
             icon.addClass('ion-navicon-round');
             icon.removeClass('ion-close-round');
+            // setInterval(()=>{logo.css({display: "block"})}, 200);
+            // logo.css({display: "block"})
+
         } 
 
     });
