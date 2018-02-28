@@ -430,7 +430,8 @@ header .row{
 .project-hover a{
     border-bottom: 0; 
     transition-delay: 0.1s;
-    visibility:inherit;  
+    visibility:inherit;
+    text-decoration: none;  
 }
 .project-hover p{
     margin-top: 10px; 
@@ -454,7 +455,7 @@ header .row{
 .project-hover h5{
     color: #27aadf;
     font-size: 140%;
-    padding: 10%;
+    padding: 10% 0;
     padding-bottom:5%;  
     transition-delay: 0.2s;
 }
