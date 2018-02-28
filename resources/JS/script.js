@@ -118,7 +118,7 @@ function initializeApp() {
     
     $('.emailSubmit').click((event)=>{
         
-        var inpObj = document.getElementById('email');
+        var inpObj = document.getElementById('email').value;
         var inpObj2 = document.getElementById('message');
         var inpObj3 = document.getElementById('name');
         if (!inpObj3.validity.valid) {
@@ -128,7 +128,7 @@ function initializeApp() {
             document.getElementById('name_m').innerHTML = null;  
 
         }
-        if (!inpObj.checkValidity()) {
+        if (!inpObj.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
             document.getElementById('email_m').innerHTML = "Please type a valid email"; 
             return
         } else{
