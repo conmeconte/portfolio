@@ -115,14 +115,34 @@ function initializeApp() {
  
 
         /* stop form from submitting normally */
-  
+    
     $('.emailSubmit').click((event)=>{
         
         var inpObj = document.getElementById('email');
         var inpObj2 = document.getElementById('message');
-        if (!inpObj.checkValidity() || !inpObj2.checkValidity()) {
+        var inpObj3 = document.getElementById('name');
+        if (!inpObj3.validity.valid) {
+            document.getElementById('name_m').innerHTML = "Please inlcude your name"; 
             return
+        }else{
+            document.getElementById('name_m').innerHTML = null;  
+
         }
+        if (!inpObj.checkValidity()) {
+            document.getElementById('email_m').innerHTML = "Please type a valid email"; 
+            return
+        } else{
+            document.getElementById('email_m').innerHTML = null;  
+
+        }
+        if (!inpObj2.checkValidity()) {
+            document.getElementById('message_m').innerHTML = "Please include a message"; 
+            return
+        } else{
+            document.getElementById('message_m').innerHTML = null;  
+
+        }
+
         event.preventDefault();
         $('*').css({ 'cursor': 'progress' });
         $.ajax({

@@ -35,6 +35,9 @@
         <header>
             <nav class=''>
                 <div class="row">
+                    <div class="headerLogo main-nav">
+                        <p>Chung's Portfolio</p>
+                    </div>
                     <ul class="main-nav js--main-nav">
                         <li><a class="js--scroll-to-home">Home</a></li>
                         <li><a class="js--scroll-to-projects">Projects</a></li>
@@ -278,42 +281,6 @@
             
         </section>
         
-        
-
-        <!-- <section class="section-testimonials">
-            <div class="row">
-                <h2>Peer Reviews</h2>
-            </div>
-            
-            <div class="row js--wp-4">
-                <div class="col span-1-of-3">
-                    <blockquote>
-                        Awesome!
-                        <cite><img src="resources/img/customer-1.jpg">Tim Horist</cite>
-                    </blockquote>
-                </div>
-                <div class="col span-1-of-3">
-                    <blockquote>
-                        Chung John!
-                        <cite><img src="resources/img/customer-2.jpg">Collette Tamez</cite>
-                    </blockquote>
-                </div>
-                <div class="col span-1-of-3">
-                    <blockquote>
-                       Dante
-                        <cite><img src="resources/img/customer-3.jpg">Milton Chapman</cite>
-                    </blockquote>
-                </div>
-                
-            </div>
-            
-            
-        
-        </section> -->
-
-
-
-        </section>
         <section class="section-form">
             <div class="row">
                 <h2>Contact</h2>
@@ -322,10 +289,12 @@
                 <form class="contact-form">
                     <div class="row">
                         <div class="col span-1-of-3">
-                            <label for="name">Name</label>    
+                            <label for="name">Name</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <input type="text" name="name" id="name" placeholder="Type Name" >
+                            <input type="text" name="name" id="name" placeholder="Type Name" required>
+                            <span id="name_m"></span>    
+
                         </div>
                     </div>
                     <div class="row">
@@ -334,6 +303,8 @@
                         </div>
                         <div class="col span-2-of-3">
                             <input type="email" name="email" id="email" placeholder="Type Email" required>
+                            <span id="email_m"></span>    
+
                         </div>
                     </div>
                     <div class="row">
@@ -351,6 +322,7 @@
                         </div>
                         <div class="col span-2-of-3">
                             <textarea name="body" placeholder="Type Message" id='message' required></textarea>
+                            <span id="message_m"></span>    
                         </div>
                     </div>
                     <div class="row">

@@ -16,12 +16,16 @@ html,
 body{
     background-color: #fff;
     color: #555;
-    /* font-family: "Roboto Slab", "Arial", sans-serif; */
     font-family: "Rubik", serif; 
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .clearfix {zoom: 1}
@@ -220,6 +224,7 @@ input[type=submit] {
 input[type=submit]{
     float:right;
     margin:0; 
+    cursor:pointer;
 }
 
 .btn-ghost:hover,
@@ -255,13 +260,17 @@ header {
 /* Main Navi*/
 header .row{
     max-width: 100%;
-    margin-right: 5%;
+    margin: 0 5%;
 }
 
 .main-nav{ 
     float: right;
     list-style: none;
     margin-top: 3%;
+}
+.headerLogo{
+    float: left; 
+    font-size: 125%; 
 }
     
 .main-nav li {
@@ -364,6 +373,7 @@ header .row{
     width: 100%;
     
 }
+
 
 .project-showcase li{
     display: block;
@@ -468,7 +478,10 @@ header .row{
     color: white;
     vertical-align:top; 
     margin-right: 10px; 
+    cursor: pointer;
+
 }
+
 
 .project-hover a:link, a:visited{
     /* bottom:0;  */
@@ -577,6 +590,10 @@ input[type=checkbox] {
 
 *:focus {outline: none;}   /*--- google에서 파랗게 보이는거 마우스 올렸을 때 ---*/
 
+.contact-form span{
+    color: red; 
+}
+
 /*-----------------------------------------*/
 /* FOOTER*/
 /*-----------------------------------------*/
@@ -623,9 +640,16 @@ footer {
 }
 
 
-.footer-nav li a:hover, 
-.footer-nav li a:active {
+.footer-nav a:hover, 
+.footer-nav a:active
+ {
     
+    color: #ddd;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+.social-links li a:hover,
+.social-links li a:active{
     color: #ddd;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
