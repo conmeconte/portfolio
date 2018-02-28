@@ -133,7 +133,7 @@ function initializeApp() {
         var inpObj2 = document.getElementById('message');
         var inpObj3 = document.getElementById('name');
         if (!inpObj3.validity.valid) {
-            document.getElementById('name_m').innerHTML = "Please inlcude your name"; 
+            document.getElementById('name_m').innerHTML = "Please include your name"; 
             return
         }else{
             document.getElementById('name_m').innerHTML = null;  
