@@ -587,9 +587,6 @@ input[type=checkbox] {
     color: red; 
 }
 
-form span{
-    pointer-events: none; 
-}
 
 /*-----------------------------------------*/
 /* FOOTER*/
