@@ -10,10 +10,10 @@ $output=[
 
 //Sanitize name field
 $message['name'] = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-// if(empty($message['name'])){
-//     $output['success'] = false;
-//     $output['messages'][] = 'missing name key';
-// }
+if(empty($message['name'])){
+    $output['success'] = false;
+    $output['messages'][] = 'missing name key';
+}
 //Validate email field
 $message['email'] = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 if(empty($message['email'])){

@@ -35,6 +35,9 @@
         <header>
             <nav class=''>
                 <div class="row">
+                    <div class="headerLogo main-nav">
+                        <p class="js--scroll-to-home">Chung's Portfolio</p>
+                    </div>
                     <ul class="main-nav js--main-nav">
                         <li><a class="js--scroll-to-home">Home</a></li>
                         <li><a class="js--scroll-to-projects">Projects</a></li>
@@ -242,7 +245,7 @@
                             <div>
                                 <h5 class="project-title">Memory Match</h5>
                                 <button><a href='https://conmeconte.com/memory_match' target="_blank" class='abuttons'>Try It</a></button>
-                                <a href="#" class="project-p" target="_blank"><i class="devicon-github-plain-wordmark"></i></a>
+                                <a href="https://github.com/conmeconte/Witcher_Memory_Match" class="project-p" target="_blank"><i class="devicon-github-plain-wordmark"></i></a>
                                 <p>Famouse game 'The Witcher' themed othello game</p> 
                             </div>    
                         </div>
@@ -268,7 +271,7 @@
                             <div>
                                 <h5 class="project-title">This website!</h5>
                                 <a href="https://github.com/conmeconte/portfolio" target="_blank" class="project-p"><i class="devicon-github-plain-wordmark"></i></a>
-                                <p>Simple portfolio website made using HTML/CSS/Javascript/jQuery</p>
+                                <p>Personal Portfolio</p>
                             </div>    
                         </div>
                     </figure>
@@ -278,54 +281,20 @@
             
         </section>
         
-        
-
-        <!-- <section class="section-testimonials">
-            <div class="row">
-                <h2>Peer Reviews</h2>
-            </div>
-            
-            <div class="row js--wp-4">
-                <div class="col span-1-of-3">
-                    <blockquote>
-                        Awesome!
-                        <cite><img src="resources/img/customer-1.jpg">Tim Horist</cite>
-                    </blockquote>
-                </div>
-                <div class="col span-1-of-3">
-                    <blockquote>
-                        Chung John!
-                        <cite><img src="resources/img/customer-2.jpg">Collette Tamez</cite>
-                    </blockquote>
-                </div>
-                <div class="col span-1-of-3">
-                    <blockquote>
-                       Dante
-                        <cite><img src="resources/img/customer-3.jpg">Milton Chapman</cite>
-                    </blockquote>
-                </div>
-                
-            </div>
-            
-            
-        
-        </section> -->
-
-
-
-        </section>
         <section class="section-form">
             <div class="row">
                 <h2>Contact</h2>
             </div>
             <div class="row">
-                <form class="contact-form">
+                <form class="contact-form" onclick="">
                     <div class="row">
                         <div class="col span-1-of-3">
-                            <label for="name">Name</label>    
+                            <label for="name">Name</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <input type="text" name="name" id="name" placeholder="Type Name" >
+                            <input type="text" name="name" id="name" placeholder="Type Name" required>
+                            <span id="name_m"></span>    
+
                         </div>
                     </div>
                     <div class="row">
@@ -334,6 +303,8 @@
                         </div>
                         <div class="col span-2-of-3">
                             <input type="email" name="email" id="email" placeholder="Type Email" required>
+                            <span id="email_m"></span>    
+
                         </div>
                     </div>
                     <div class="row">
@@ -351,6 +322,7 @@
                         </div>
                         <div class="col span-2-of-3">
                             <textarea name="body" placeholder="Type Message" id='message' required></textarea>
+                            <span id="message_m"></span>    
                         </div>
                     </div>
                     <div class="row">
@@ -358,7 +330,7 @@
                             <label>&nbsp;</label>    
                         </div>
                         <div class="col span-2-of-3 js--wp-5">
-                            <input type="submit" value="Send" class="emailSubmit">
+                            <input type="button" value="Send" class="emailSubmit">
                         </div>
                     </div>
                 </form>
@@ -370,7 +342,7 @@
             <!-- Modal content -->
             <div class="modal-content">
               <span class="close">&times;</span>
-              <p>Mail was sent out successfully, I will get back on you as soon as possible. Thank you for your interest</p>
+              <p>Mail was sent out successfully, I will get back to you as soon as possible. Thank you for your interest</p>
             </div>
           
         </div>

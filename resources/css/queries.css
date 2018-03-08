@@ -18,6 +18,7 @@
     }
 
 
+
 }
 
 /* Small tablet to big tablet: from 768px to 1023px */
@@ -62,9 +63,20 @@
         font-size: 350%;
         color: #27aadf;
     }
+    .project-hover h5{
+        font-size: 180%; 
+    }
+    .project-hover a:link{
+        font-size: medium; 
+    }
+    .project-hover button{
+        padding: 2vmin; 
+    }
 
 
 }
+
+
 
 /* Small phones to small tablets  from 481px to 767px*/ 
 @media only screen and (max-width: 767px) {
@@ -88,6 +100,8 @@
         float: left;
         margin-top: 35px;
         /* margin-left: 40%; */
+        /* background-color:#27aadf82; 
+        padding: 4%;  */
     }
 
     .main-nav li:first-of-type{
@@ -96,14 +110,13 @@
     .main-nav li{
         display: block;
         margin-top: 10px; 
+        margin: auto; 
+
     }
 
-    /* .main-nav li a:link,
-    .main-nav li a:visited{
-        display: block;
-        border: 0;
-        font-size: 125%;
-    } */
+    .headerLogo{
+        display:block; 
+    }
 
     .sticky .main-nav {margin-top: 10px;}
     
@@ -167,6 +180,28 @@
     }
 }
 
+/* Small phones to small tablets  from 481px to 767px*/ 
+@media only screen and (max-width: 767px) and (orientation: landscape){
+
+    .main-nav{
+        float: left;
+        margin-top: 35px;
+        /* margin-left: 65%; */
+        /* background-color:#27aadf82;  */
+        padding: 4%; 
+        color: white; 
+    }
+    /* .sticky .main-nav{
+        background-color: white; 
+        z-index: 10; 
+    } */
+    .main-nav.js--main-nav{
+        background-color: #27abdf;
+        z-index: 10; 
+        margin-left: 65%; 
+    }
+}
+
 
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
@@ -178,9 +213,13 @@
     .project-hover p{
         font-size: 12px; 
     }
-    .project-hover a.abuttons {
-        padding: 4%;
-        height: 20%;
-        width: 25%;
+
+    .project-hover div{
+        padding: 5px;
     }
+    /* .project-hover h5{
+        font-size: 100%;
+        padding: 10px 0; 
+    } */
+
 }

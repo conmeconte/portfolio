@@ -16,12 +16,16 @@ html,
 body{
     background-color: #fff;
     color: #555;
-    /* font-family: "Roboto Slab", "Arial", sans-serif; */
     font-family: "Rubik", serif; 
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .clearfix {zoom: 1}
@@ -173,7 +177,7 @@ a:active {
 /* -------------- BUTTONS -------*/
 .btn:link, 
 .btn:visited,
-input[type=submit] {
+input[type=button] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300px; 
@@ -188,7 +192,7 @@ input[type=submit] {
 
 .btn-full:link, 
 .btn-full:visited,
-input[type=submit] {
+input[type=button] {
     background-color: #27aadf;
     border: 1px solid #27aadf;
     color: #fff; 
@@ -199,27 +203,28 @@ input[type=submit] {
 .btn-ghost:visited {
     border: 1px solid #27aadf;
     color: #27aadf;
-    background-color: #ffffff59;
+    background-color: #ffffffc4;
 }
 
 
 .btn:hover,
 .btn:active,
-input[type=submit]:hover,
-input[type=submit]:active {
+input[type=button]:hover,
+input[type=button]:active {
     background-color: #135992;
     
 }
 
 .btn-full:hover, 
 .btn-full:active,
-input[type=submit] {
+input[type=button] {
     border: 1px solid #27aadf;
     
 }
-input[type=submit]{
+input[type=button]{
     float:right;
     margin:0; 
+    cursor:pointer;
 }
 
 .btn-ghost:hover,
@@ -255,13 +260,25 @@ header {
 /* Main Navi*/
 header .row{
     max-width: 100%;
-    margin-right: 5%;
+    margin: 0 5%;
 }
 
 .main-nav{ 
     float: right;
     list-style: none;
     margin-top: 3%;
+}
+.headerLogo{
+    float: left; 
+    font-size: 125%; 
+    cursor: pointer; 
+    border-bottom: 2px solid transparent;
+
+}
+
+.headerLogo:hover{
+    border-bottom: 2px solid #27aadf;
+
 }
     
 .main-nav li {
@@ -273,33 +290,20 @@ header .row{
     text-decoration: none; 
     color: white; 
     font-size: 125%; 
+    border-bottom: 2px solid transparent;
+
 
 }
 .main-nav li a:hover, 
 .main-nav li a:active {
     color: #27aadf;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid #27aadf;
     cursor: pointer;
     font-size: 125%; 
 
 }
 
-/* .main-nav li a:link,
-.main-nav li a:visited {
 
-    text-decoration: none;
-    text-transform: uppercase;
-
-    border-bottom: 2px solid transparent; 
-    -webkit-transition: border-bottom 0.2s; 
-    transition: border-bottom 0.2s;
-    padding: 8px 0px;
-} */
-    
-.main-nav li a:hover,
-.main-nav li a:active {
-    border-bottom: 2px solid #27aadf;
-}
 
 /* Mobile Navi */
 
@@ -324,6 +328,24 @@ header .row{
     -webkit-box-shadow: 0 2px 2px #efefef;
             box-shadow: 0 2px 2px #efefef;
     z-index: 9999;
+}
+
+
+.sticky .headerLogo.main-nav{
+    float: left; 
+    font-size: 125%; 
+    cursor: pointer; 
+    border-bottom: 2px solid transparent;
+    margin: 0; 
+
+}
+
+.sticky .headerLogo p{
+    padding: 16px 0;
+}
+
+.sticky .headerLogo:hover{
+    border-bottom: 2px solid #27aadf;
 }
 
 .sticky .main-nav {margin: 18px 0;}
@@ -364,6 +386,7 @@ header .row{
     width: 100%;
     
 }
+
 
 .project-showcase li{
     display: block;
@@ -408,7 +431,8 @@ header .row{
     height: 100%;
     background-color: #00000057;;
     text-align: center; 
-    transition-duration: 0.1s; 
+    -webkit-transition-duration: 0.1s; 
+            transition-duration: 0.1s; 
     /* padding: 15%; */
 
 }
@@ -429,8 +453,10 @@ header .row{
 
 .project-hover a{
     border-bottom: 0; 
-    transition-delay: 0.1s;
-    visibility:inherit;  
+    -webkit-transition-delay: 0.1s; 
+            transition-delay: 0.1s;
+    visibility:inherit;
+    text-decoration: none;  
 }
 .project-hover p{
     margin-top: 10px; 
@@ -454,9 +480,10 @@ header .row{
 .project-hover h5{
     color: #27aadf;
     font-size: 140%;
-    padding: 10%;
+    padding: 10% 0;
     padding-bottom:5%;  
-    transition-delay: 0.2s;
+    -webkit-transition-delay: 0.2s;  
+            transition-delay: 0.2s;
 }
 .project-hover button{
     border: none;
@@ -467,7 +494,10 @@ header .row{
     color: white;
     vertical-align:top; 
     margin-right: 10px; 
+    cursor: pointer;
+
 }
+
 
 .project-hover a:link, a:visited{
     /* bottom:0;  */
@@ -576,6 +606,11 @@ input[type=checkbox] {
 
 *:focus {outline: none;}   /*--- google에서 파랗게 보이는거 마우스 올렸을 때 ---*/
 
+.contact-form span{
+    color: red; 
+}
+
+
 /*-----------------------------------------*/
 /* FOOTER*/
 /*-----------------------------------------*/
@@ -622,9 +657,16 @@ footer {
 }
 
 
-.footer-nav li a:hover, 
-.footer-nav li a:active {
+.footer-nav a:hover, 
+.footer-nav a:active
+ {
     
+    color: #ddd;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+.social-links li a:hover,
+.social-links li a:active{
     color: #ddd;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
@@ -685,7 +727,7 @@ footer p {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 40% auto; 
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 
@@ -694,7 +736,8 @@ footer p {
 }
 .modal-content p {
     top: 50%;
-    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
 }
 
 /* The Close Button */

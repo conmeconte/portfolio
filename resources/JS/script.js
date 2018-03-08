@@ -62,13 +62,24 @@ function initializeApp() {
     $('.js--nav-icon').click(()=>{
         var nav = $('.js--main-nav');
         var icon = $('.js--nav-icon i')
-        nav.slideToggle(200);
+        var logo= $('.headerLogo')
+        // logo.toggle();
+        nav.slideToggle(200,()=>{
+            if(icon.hasClass('ion-navicon-round')){
+                logo.css({display: "block"})
+            }
+        });
         if(icon.hasClass('ion-navicon-round')){
             icon.addClass('ion-close-round');
             icon.removeClass('ion-navicon-round');
+            logo.css({display: "none"});
+
         } else{
             icon.addClass('ion-navicon-round');
             icon.removeClass('ion-close-round');
+            // setInterval(()=>{logo.css({display: "block"})}, 200);
+            // logo.css({display: "block"})
+
         } 
 
     });
@@ -115,14 +126,34 @@ function initializeApp() {
  
 
         /* stop form from submitting normally */
-  
+    
     $('.emailSubmit').click((event)=>{
         
-        var inpObj = document.getElementById('email');
+        var inpObj = document.getElementById('email').value;
         var inpObj2 = document.getElementById('message');
-        if (!inpObj.checkValidity() || !inpObj2.checkValidity()) {
+        var inpObj3 = document.getElementById('name');
+        if (!inpObj3.validity.valid) {
+            document.getElementById('name_m').innerHTML = "Please include your name"; 
             return
+        }else{
+            document.getElementById('name_m').innerHTML = null;  
+
         }
+        if (!inpObj.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+            document.getElementById('email_m').innerHTML = "Please type a valid email"; 
+            return
+        } else{
+            document.getElementById('email_m').innerHTML = null;  
+
+        }
+        if (!inpObj2.checkValidity()) {
+            document.getElementById('message_m').innerHTML = "Please include a message"; 
+            return
+        } else{
+            document.getElementById('message_m').innerHTML = null;  
+
+        }
+
         event.preventDefault();
         $('*').css({ 'cursor': 'progress' });
         $.ajax({
@@ -159,6 +190,11 @@ function initializeApp() {
         });
         
         
+    });
+    $('body').click(function() {
+        if(event.target.className === "modal"){
+            $('.modal').css({display: 'none'});
+        }
     });
 
     $('.close').click(()=>{
